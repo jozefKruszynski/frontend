@@ -1,7 +1,7 @@
 <template>
   <div>
     <Toolbar
-      title="Music Assistant"
+      :show-logo="true"
       :show-loading="true"
       :enforce-overflow-menu="true"
       :menu-items="menuItems"
