@@ -46,15 +46,15 @@ export default createVuetify(
         light: {
           dark: false,
           colors: {
-            primary: colors.blue.base,
-            accent: colors.blue.darken2,
+            primary: "#03a9f4",
+            accent: "#4fc3f7",
           },
         },
         dark: {
           dark: true,
           colors: {
-            primary: colors.blue.darken4,
-            accent: colors.blue.lighten2,
+            primary: "#0288d1",
+            accent: "#29b6f6",
           },
         },
       },
