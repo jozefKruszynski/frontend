@@ -11,7 +11,9 @@
     </template>
 
     <template #title>
-      <MusicAssistantLogo v-if="showLogo" class="toolbar-logo" />
+      <!-- Temporarily using TestIcon to verify vite-svg-loader -->
+      <TestIcon v-if="showLogo" style="width:30px; height:30px;" />
+      <!-- <MusicAssistantLogo v-if="showLogo" class="toolbar-logo" /> -->
       <button v-else-if="title" @click="emit('titleClicked')">
         {{ title }}
         <v-badge
@@ -181,6 +183,7 @@ import { ContextMenuItem } from "@/layouts/default/ItemContextMenu.vue";
 import { getBreakpointValue } from "../plugins/breakpoint";
 import { api } from "@/plugins/api";
 import MusicAssistantLogo from '@/assets/music-assistant-logo.svg?component';
+import TestIcon from '@/assets/test-icon.svg?component'; // Import the test icon
 
 // properties
 export interface Props {
@@ -266,10 +269,12 @@ export interface ToolBarMenuItem extends ContextMenuItem {
 /* For the provided SVG, #F2F4F9 is light, #18BCF2 is a blue. These might be okay for dark/light themes respectively or need overrides. */
 /* Given the SVG structure, the #F2F4F9 is the text color and #18BCF2 is an accent. */
 /* We want #F2F4F9 to be like theme's text color, and #18BCF2 to be like theme's primary. */
+/*
 .toolbar-logo :deep(path[fill="#F2F4F9"]) {
   fill: var(--v-theme-on-surface);
 }
 .toolbar-logo :deep(path[fill="#18BCF2"]) {
   fill: var(--v-theme-primary);
 }
+*/
 </style>
