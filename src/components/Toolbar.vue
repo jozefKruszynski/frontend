@@ -257,22 +257,20 @@ export interface ToolBarMenuItem extends ContextMenuItem {
 }
 
 .toolbar-logo {
-  height: 36px; /* Adjust as needed */
+  height: 24px; /* Reduced from 36px, aiming for ~50% reduction of original visual impact */
   width: auto;
   vertical-align: middle;
-  /* Attempt to make SVG colors theme-aware if its internal fills are problematic */
-  /* fill: currentColor; /* This might work if SVG paths don't have their own fill set */
+  display: inline-block; /* Ensure proper block behavior for sizing */
+  /* object-fit: contain; /* May not apply to SVG components but good for <img> */
 }
 /* If the SVG has internal fills like #F2F4F9, we might need to target them if they clash with themes */
 /* For the provided SVG, #F2F4F9 is light, #18BCF2 is a blue. These might be okay for dark/light themes respectively or need overrides. */
 /* Given the SVG structure, the #F2F4F9 is the text color and #18BCF2 is an accent. */
 /* We want #F2F4F9 to be like theme's text color, and #18BCF2 to be like theme's primary. */
-/*
 .toolbar-logo :deep(path[fill="#F2F4F9"]) {
   fill: var(--v-theme-on-surface);
 }
 .toolbar-logo :deep(path[fill="#18BCF2"]) {
   fill: var(--v-theme-primary);
 }
-*/
 </style>
