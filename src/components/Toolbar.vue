@@ -11,9 +11,7 @@
     </template>
 
     <template #title>
-      <!-- Temporarily using TestIcon to verify vite-svg-loader -->
-      <TestIcon v-if="showLogo" style="width:30px; height:30px;" />
-      <!-- <MusicAssistantLogo v-if="showLogo" class="toolbar-logo" /> -->
+      <MusicAssistantLogo v-if="showLogo" class="toolbar-logo" />
       <button v-else-if="title" @click="emit('titleClicked')">
         {{ title }}
         <v-badge
@@ -183,7 +181,7 @@ import { ContextMenuItem } from "@/layouts/default/ItemContextMenu.vue";
 import { getBreakpointValue } from "../plugins/breakpoint";
 import { api } from "@/plugins/api";
 import MusicAssistantLogo from '@/assets/music-assistant-logo.svg?component';
-import TestIcon from '@/assets/test-icon.svg?component'; // Import the test icon
+// import TestIcon from '@/assets/test-icon.svg?component'; // Remove TestIcon import
 
 // properties
 export interface Props {
