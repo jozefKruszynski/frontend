@@ -267,10 +267,12 @@ export interface ToolBarMenuItem extends ContextMenuItem {
 /* For the provided SVG, #F2F4F9 is light, #18BCF2 is a blue. These might be okay for dark/light themes respectively or need overrides. */
 /* Given the SVG structure, the #F2F4F9 is the text color and #18BCF2 is an accent. */
 /* We want #F2F4F9 to be like theme's text color, and #18BCF2 to be like theme's primary. */
+/*
 .toolbar-logo :deep(path[fill="#F2F4F9"]) {
   fill: var(--v-theme-on-surface);
 }
 .toolbar-logo :deep(path[fill="#18BCF2"]) {
   fill: var(--v-theme-primary);
 }
+*/
 </style>
