@@ -3,6 +3,7 @@
   <ResponsiveIcon
     v-if="isVisible && player"
     v-bind="icon"
+    color="primary"
     :disabled="!queueHasNext && !playerHasNext"
     icon="mdi-skip-next-outline"
     :type="'btn'"

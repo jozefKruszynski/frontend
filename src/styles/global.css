@@ -136,6 +136,17 @@ a {
   display: flex !important;
 }
 
+/* Default Vuetify Button Styling */
+.v-btn.v-btn--variant-flat.bg-primary {
+  border-radius: 4px !important;
+  color: #FFFFFF !important; /* Ensure white text on primary background */
+  transition: opacity 0.2s ease-in-out; /* Add a smooth transition */
+}
+
+.v-btn.v-btn--variant-flat.bg-primary:hover {
+  opacity: 0.85;
+}
+
 
 
 h1 {

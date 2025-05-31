@@ -22,6 +22,7 @@
                 : Math.round(store.activePlayer?.volume_level || 0)
             "
             :allow-wheel="true"
+            color="primary"
             @update:model-value="
               store.activePlayer!.group_childs.length > 0
                 ? api.playerCommandGroupVolume(
@@ -121,7 +122,7 @@ const props = withDefaults(defineProps<Props>(), {
   volumeSize: "150px",
   responsiveVolumeSize: true,
   isVisible: true,
-  color: "",
+  color: "primary",
 });
 
 //refs

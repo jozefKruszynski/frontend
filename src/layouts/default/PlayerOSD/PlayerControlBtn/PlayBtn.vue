@@ -3,6 +3,7 @@
   <ResponsiveIcon
     v-if="isVisible && player"
     v-bind="icon"
+    color="primary"
     :disabled="!queueCanPlay && !playerCanPlay"
     :icon="iconStyle ? `${baseIcon}-${iconStyle}` : baseIcon"
     :type="'btn'"

@@ -26,7 +26,9 @@ import Button from "@/components/mods/Button.vue";
 export interface Props {
   color?: string;
 }
-defineProps<Props>();
+withDefaults(defineProps<Props>(), {
+  color: "primary",
+});
 </script>
 
 <style>
